@@ -4,6 +4,7 @@ class RainEffect extends Component {
   render() {
     return (
       <>
+        <div ref={(ref) => (this.mount = ref)}></div>
         <div></div>
       </>
     );
