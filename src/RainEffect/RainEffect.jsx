@@ -38,7 +38,10 @@ class RainEffect extends Component {
       scene.fog = new THREE.FogExp2(0x11111f, 0.002);
       renderer.setClearColor(scene.fog.color);
       renderer.setSize(window.innerWidth, window.innerHeight);
+
       document.body.appendChild(renderer.domElement);
+      // this.mount.appendChild(renderer.domElement);
+
       rainGeo = new THREE.Geometry();
       for (let i = 0; i < rainCount; i++) {
         let rainDrop = new THREE.Vector3(
