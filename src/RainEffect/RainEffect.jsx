@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import * as THREE from "three";
+import Smoke from "../images/smoke.png";
 import "./RainEffect.css";
 
 let scene,
@@ -57,7 +58,7 @@ class RainEffect extends Component {
       rain = new THREE.Points(rainGeo, rainMaterial);
       scene.add(rain);
       let loader = new THREE.TextureLoader();
-      loader.load("smoke.png", function (texture) {
+      loader.load({ Smoke }, function (texture) {
         let cloudGeo = new THREE.PlaneBufferGeometry(500, 500);
         let cloudMaterial = new THREE.MeshLambertMaterial({
           map: texture,
